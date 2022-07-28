@@ -11,7 +11,7 @@ PIP_BIN := $(VENV_DIR)/bin/pip
 # Bootstrap Dependencies
 
 $(STATIC_DIR)/: build/bootstrap-$(VERSION)-dist
-	rsync -r build/bootstrap-$(VERSION)-dist/ $(STATIC_DIR)
+	rsync -vr build/bootstrap-$(VERSION)-dist/ $(STATIC_DIR)
 
 build/bootstrap-$(VERSION)-dist/: $(DOWNLOADED_FILE)
 	unzip $(DOWNLOADED_FILE) -d build
@@ -32,5 +32,11 @@ build: $(VENV_DIR) $(STATIC_DIR)
 
 # Other
 
+.PHONY: reset
+reset:
+	rm -rf $(STATIC_DIR)
+
+.PHONY: clean
 clean:
-	rm -rf build $(STATIC_DIR) $(VENV_DIR)
+	rm -rf build dist $(VENV_DIR)
+	git clean -dxf $(STATIC_DIR)
