@@ -1,7 +1,7 @@
-VERSION := 4.6.2
-DOWNLOAD_URL := https://github.com/twbs/bootstrap/releases/download/v4.6.2/bootstrap-4.6.2-dist.zip
+VERSION := 5.3.2
+DOWNLOAD_URL := https://github.com/twbs/bootstrap/releases/download/v$(VERSION)/bootstrap-$(VERSION)-dist.zip
 DOWNLOADED_FILE := build/bootstrap-dist.zip
-STATIC_DIR := bootstrap4/static
+STATIC_DIR := bootstrap5/static
 
 
 VENV_DIR := .venv

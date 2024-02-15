@@ -3,11 +3,11 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "minimal_django_bootstrap4"
+name = "minimal-django-bootstrap5"
 version = "0.1.0"
 license = { text = "MIT License" }
 authors = [{ name = "Paul Traylor" }]
-keywords = ["django"]
+keywords = ["django", "bootstrap"]
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
@@ -30,5 +30,5 @@ dependencies = [
 ]
 
 [project.urls]
-Issues = "http://github.com/kfdm/django-bootstrap4/issues"
-"Source Code" = "http://github.com/kfdm/django-bootstrap4"
+Issues = "http://github.com/kfdm/django-minimal-bootstrap5/issues"
+"Source Code" = "http://github.com/kfdm/django-minimal-bootstrap5"
